@@ -11,3 +11,6 @@ def api_view(request, *args, **kwargs) :
 
 def acceuil(request) :
     return render(request, 'acceuil.html')
+
+def blog(request) :
+    return render(request, 'blog.html')
