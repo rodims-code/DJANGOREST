@@ -8,3 +8,9 @@ def api_view(request, *args, **kwargs) :
         'language' : 'python',
     }
     return JsonResponse(data)
+
+def acceuil(request) :
+    return render(request, 'acceuil.html')
+
+def blog(request) :
+    return render(request, 'blog.html')
