@@ -20,6 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
+    path('produc/', include('produc.urls')),
 ]
 
-endpoint  = 'http ://http://127.0.0.1:8000/api'
+""" endpoint  = 'http ://http://127.0.0.1:8000/api' """

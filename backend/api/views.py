@@ -3,14 +3,12 @@ from django.shortcuts import render
 from django.http import JsonResponse
 # Create your views here.
 
+# Envois des donnees depuis un base de bonnes et renvois en json
+#les ilite de django
 def api_view(request, *args, **kwargs) :
-    # request => HttpRequest
-    print (request.body)
-    data = json.loads(request.body)
-    print (data)
-    data['headers'] = dict(request.headers)
-    data['params'] = dict(request.GET)
-    data['post-data']= dict(request.POST)
-    print (request.headers)
-    data['content_type'] = request.content_type
+    data = {
+        'name': 'John',
+        'age': 27,
+        'language': 'python',
+    }
     return JsonResponse(data) # return JSON
