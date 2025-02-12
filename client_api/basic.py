@@ -1,11 +1,11 @@
 import requests
 
-endpoint = "http://httpbin.org/anything"
+endpoint = "http://127.0.0.1:8000/"
 
-response = requests.get(endpoint, data={"key": "value"})
+response = requests.get(endpoint)
 print(response.text)
-
-{
+print(response.status_code)
+""" {
   "args": {}, 
   "data": "", 
   "files": {}, 
@@ -21,4 +21,4 @@ print(response.text)
   "method": "GET",
   "origin": "102.129.82.97",
   "url": "http://httpbin.org/anything"
-}
+} """
